@@ -1,0 +1,4 @@
+更改classes
+
+更改[yolo]上一個的[convolutional]就好，filters=(classes+5)*3
+[yolo]內的classes要改成對應類別數

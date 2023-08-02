@@ -1,0 +1,32 @@
+# COCO 2017 dataset http://cocodataset.org
+# Train command: python train.py --data coco.yaml
+# Default dataset location is next to YOLOv5:
+#   /parent_folder
+#     /coco
+#     /yolov5
+
+
+# download command/URL (optional)
+download: bash data/scripts/get_coco.sh
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: E:/product_dataset/yolo_data/yolo_20/train_20.txt  # 118287 images
+val: E:/product_dataset/yolo_data/yolo_20/val_20.txt  # 5000 images
+test: E:/PyTorch_YOLOv4-master/PyTorch_YOLOv4-master/test/test_20.txt  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+
+# number of classes
+nc: 20
+
+# class names
+names: [ 'greengood','kolanut','cripsynoodles','pocky','cookie','oreo','cocopuff','oricracker','oysterchip','spicydoritos',
+       'sweetpotato','lonelygod','cheetos','tomatofries','crispyflute','cocostick','skewernoodles','ritzcracker','cheesechip','seaweedcookie']
+      #'spicykaramju','coconutscookie','applevinegar','pestochip','kido','nenecookie','bananapocky','biscoff','nutritionalchip','purpleairwaves',
+       #'seaweedsalt,'smallstick','cocopeacockroll','brownsugarbar','yakultcrispyflute','goodtimechoc','haribosoft','seafoodcracker','squidcracker','nutchocolate',
+       #'darkchocolate','minicrispdoritos','blackcookie','widechip','purpleqq','milkyokan','bakecookie','milkcandy','newpie','strawberrycrisp']
+
+
+# Print classes
+# with open('data/coco.yaml') as f:
+#   d = yaml.safe_load(f)  # dict
+#   for i, x in enumerate(d['names']):
+#     print(i, x)
